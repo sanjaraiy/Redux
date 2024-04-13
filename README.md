@@ -2,8 +2,6 @@
 This is global state management library. it is used for avoiding `props drilling` in an application.
 
 
-## Architecture of Redux :-
-
 
 
 
