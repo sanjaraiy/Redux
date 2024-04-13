@@ -1,13 +1,12 @@
 import './App.css'
 import Counter from './components/Counter'
-import { useDispatch } from 'react-redux'
 
+
+import { useDispatch } from 'react-redux'
 
 function App() {
     const dispatch = useDispatch();
-
-
-  return (
+return (
     <>
       <button onClick={(e)=>dispatch({type:'INCREMENT'})}>Increment</button>
       <Counter></Counter>
