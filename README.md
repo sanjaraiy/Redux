@@ -69,19 +69,6 @@ export const store = createStore(reducer);
 - If we want to update  a state of redux-store,for this, we use the `useDispatch hook`,it has access of `action`, by using this, we  can dispatch a event or action (send the data or action (event) to the redux-store)
 
 ```js
-import { useSelector } from 'react-redux'
-
-function Counter() {
-    const  count = useSelector((state)=>{ return state;} )
-  return (
-    <div>{count}</div>
-  )
-}
-```
-
-- If we want to access or get some data or get current state of redux-state, for this, we use the `useSelector hook`, it has access of `current state of redux-store`, by using this, we can reterive a current state of redux-store or get data from a redux-store.
-
-```js
 import { useDispatch } from 'react-redux'
 
 function App() {
@@ -92,6 +79,19 @@ return (
       <Counter></Counter>
       <button onClick={(e)=>dispatch({type:'DECREMENT'})}>Decrement</button>
     </>
+  )
+}
+```
+
+- If we want to access or get some data or get current state of redux-state, for this, we use the `useSelector hook`, it has access of `current state of redux-store`, by using this, we can reterive a current state of redux-store or get data from a redux-store.
+
+```js
+import { useSelector } from 'react-redux'
+
+function Counter() {
+    const  count = useSelector((state)=>{ return state;} )
+  return (
+    <div>{count}</div>
   )
 }
 ```
